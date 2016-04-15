@@ -96,8 +96,6 @@ exe 'syn match	siestaOutput	/\<'.CP('SaveHS').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('DiagUseNewDiagk').'\>/'
 
-exe 'syn match	siestaOutput	/\<'.CP('COOP.write').'\>/'
-
 exe 'syn match	siestaOutput	/\<'.CP('WriteEigenvalues').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('OMMWriteCoeffs').'\>/'
@@ -135,9 +133,9 @@ exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90UnkGrid1').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90UnkGrid2').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90UnkGrid3').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90UnkGridBinary').'\>/'
-exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90.NumberOfBands').'\>/'
-exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90.NumberOfBandsUp').'\>/'
-exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90.NumberOfBandsDown').'\>/'
+exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90NumberOfBands').'\>/'
+exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90NumberOfBandsUp').'\>/'
+exe 'syn match	siestaOutput	/\<'.CP('Siesta2Wannier90NumberOfBandsDown').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('SaveRho').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('SaveDeltaRho').'\>/'
@@ -232,7 +230,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('AtomicCoordinatesAndAtomicSpecies').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('Zmatrix').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('ZMUnitsLength').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('ZM.UnitsAngle').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('ZMUnitsAngle').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('WarningMinimumAtomicDistance').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('MaxBondDistance').'\>/'
