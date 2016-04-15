@@ -5,15 +5,9 @@
 " Latest Revision: 	2016-04-14
 
 func! CP(word) 			" fdf labels do not care about . _ or -
-    let l:s = ''
-    let l:first = 1
-    for i in range(len(a:word))
-        if !l:first
-            let l:s .= '[\._-]*'
-        else
-            let l:first = 0
-        endif
-        let l:s .= a:word[i]
+    let l:s = a:word[0]
+    for i in range(1,len(a:word))
+        let l:s .= '[\._-]*' . a:word[i]
     endfor
     return l:s
 endf
@@ -674,6 +668,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('TBTProjs').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTProj').'[\._-]*\S\+\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('Gamma').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('position').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('atom').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('proj').'\>/'
 
 "
@@ -720,7 +715,7 @@ syn match 	siestaArgs 	'\<TSHS-file\>'
 syn match 	siestaArgs 	'\(\s\|^\)TSHS\($\|\s\)'
 
 syn keyword 	siestaVars 	a b alpha beta gamma A3 A2 A1 inf prev next
-syn match 	siestaVars 	'[+-][a-c][1-3]'
+syn match 	siestaVars 	'[+-][Aa-c][1-3]'
 
 syn keyword 	siestaOperats 	from to step begin end plus minus
 syn match 	siestaOperats 	'[\{\}><]'
