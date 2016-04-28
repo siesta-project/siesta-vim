@@ -299,6 +299,18 @@ exe 'syn match 	siestaKeys 	/\<'.CP('GridCellSampling').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('EggboxRemove').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('EggboxScale').'\>/'
 
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUProjectorGenerationMethod').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUEnergyShift').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUCutoffNorm').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUSoftDefault').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUSoftInnerRadius').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUSoftPotential').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUThresholdTol').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUPopTol').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUFirstIteration').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUPotentialShift').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LDAUProj').'\>/'
+
 exe 'syn match 	siestaKeys 	/\<'.CP('NeglNonOverlapInt').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('FixAuxiliaryCell').'\>/'
