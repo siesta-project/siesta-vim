@@ -149,6 +149,7 @@ exe 'syn match	siestaOutput	/\<'.CP('TimerReportThreshold').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('UseSaveData').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('WriteDenchar').'\>/'
+exe 'syn match	siestaOutput	/\<'.CP('WriteIonPlotFiles').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('MDUseSaveCG').'\>/'
 
