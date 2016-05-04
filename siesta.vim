@@ -595,6 +595,10 @@ exe 'syn match 	siestaKeys 	/\<'.CP('TSElecsBulk').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElecsDMInit').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElecsCoordEPS').'\>/'
 
+exe 'syn match 	siestaKeys 	/\<'.CP('TBTElecsEta').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('TBTElecsBulk').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('TBTElecsCoordEPS').'\>/'
+
 exe 'syn match 	siestaKeys 	/\<'.CP('TSChemPots').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSChemPot').'[\._-]*\w\+\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('chemicalshift').'\>/'
