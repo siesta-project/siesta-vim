@@ -528,10 +528,10 @@ exe 'syn match 	siestaOutput 	/\<'.CP('TBTkFile').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFMPI').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFCompress').'\>/'
 
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFSigmaSave').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFSigmaPrecision').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFSigmaCompress').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTSigmaOnly').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFSelfEnergySave').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFSelfEnergyPrecision').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFSelfEnergyCompress').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTSelfEnergyOnly').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFProjCompress').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTProjsInit').'\>/'
@@ -569,25 +569,21 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DMInitBulk').'\([\._-]*\w\+[\._-]*'.CP('DM'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElecs').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElec').'[\._-]*\w\+\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSTSfile').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('chemicalpotential').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('chempot').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('mu').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('semiinf').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('semiinfdir').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('semiinfdirection').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('electrodeposition').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('elecpos').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('DMupdate').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('usedatoms').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('Eta').'\>/'
-exe 'syn match 	siestaKeys 	/\<\('.CP('replicate').'\|'.CP('rep').'\)\([\._-]*[a-c][1-3]\)\=\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('preexpand').'\>/'
 
-exe 'syn match 	siestaKeys 	/\<'.CP('bulk').'\>/'
-exe 'syn match 	siestaKeys 	/\<\('.CP('TSDEfile').'\|'.CP('TSDE').'\)\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('outofcore').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('Effraction').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('checkkgrid').'\>/'
+" These keys are existing in the Elec block and are parsed 'as is'
+syn match 	siestaKeys 	"\(chemical-potential\|chem-pot\|mu\)"
+syn match 	siestaKeys 	"\(semi-inf-direction\|semi-inf-dir\|semi-inf\)"
+syn match 	siestaKeys 	"\(electrode-position\|elec-pos\)"
+syn match 	siestaKeys 	"DM-update"
+syn match 	siestaKeys 	"used-atoms"
+syn match 	siestaKeys 	"Eta"
+syn match 	siestaKeys 	"bloch-\(A[1-3]\|[a-c]\)"
+syn match 	siestaKeys 	"pre-expand"
+syn match 	siestaKeys 	"bulk"
+syn match 	siestaKeys 	"\(TSDE-file\|TSDE\)"
+syn match 	siestaKeys 	"out-of-core"
+syn match 	siestaKeys 	"Ef-fraction"
+syn match 	siestaKeys 	"check-kgrid"
 
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElecsDMUpdate').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElecsEta').'\>/'
@@ -601,13 +597,12 @@ exe 'syn match 	siestaKeys 	/\<'.CP('TBTElecsCoordEPS').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('TSChemPots').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSChemPot').'[\._-]*\w\+\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('chemicalshift').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('contoureq').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('ElectronicTemperature').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('Temp').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('kT').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('contoureqpole').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('contoureqpoleN').'\>/'
+
+" These keys are existing in the Chem block
+syn match 	siestaKeys 	"\(chemical-shift\|mu\)"
+syn match 	siestaKeys 	"contour.eq"
+syn match 	siestaKeys 	"\(ElectronicTemperature\|temp\|kT\)"
+syn match 	siestaKeys 	"contour.eq.pole[N]?"
 
 exe 'syn match 	siestaKeys 	/\<'.CP('TSContoursEqPole').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSContoursEqPoleN').'\>/'
@@ -681,9 +676,11 @@ exe 'syn match 	siestaKeys 	/\<'.CP('TBTContoursEta').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTProjs').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTProj').'[\._-]*\S\+\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('Gamma').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('position').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('proj').'\>/'
+
+" These keys are existing in the Proj block
+syn match 	siestaKeys 	"Gamma"
+syn match 	siestaKeys 	"position"
+syn match 	siestaKeys 	"proj"
 
 "
 " args - release and dev
@@ -729,7 +726,7 @@ syn match 	siestaArgs 	'\<TSHS-file\>'
 syn match 	siestaArgs 	'\(\s\|^\)TSHS\($\|\s\)'
 
 syn keyword 	siestaVars 	a b alpha beta gamma A3 A2 A1 inf prev next
-syn match 	siestaVars 	'[+-][a-c][1-3]'
+syn match 	siestaVars 	'\(\s\|^\)[+-][a-c][1-3]\($\|\s\)'
 
 syn keyword 	siestaOperats 	from to step begin end plus minus
 syn match 	siestaOperats 	'[\{\}><]'
@@ -743,10 +740,10 @@ if !exists("did_siesta_syntax_inits")
   hi link siestaComment		Comment
   hi link siestaUnits 		Label
   hi link siestaOutput 		Function
-  hi link siestaKeys 		Typedef
   hi link siestaArgs 		Special
   hi link siestaOperats 	Character
   hi link siestaVars 		Label
+  hi link siestaKeys 		Typedef
 endif
 
 let b:current_syntax = "siesta"
