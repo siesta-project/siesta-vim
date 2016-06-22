@@ -91,6 +91,7 @@ exe 'syn match	siestaOutput	/\<'.CP('SaveHS').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('DiagUseNewDiagk').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('WriteEigenvalues').'\>/'
+exe 'syn match	siestaOutput	/\<'.CP('LongOutput').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('OMMWriteCoeffs').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('OMMReadCoeffs').'\>/'
