@@ -521,7 +521,7 @@ exe 'syn match 	siestaOutput 	/\<'.CP('TBTDOSAElecsAll').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTdH').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTdHParallel').'\>/'
 
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTTSHS').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTHS').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTTSHSFiles').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTkFile').'\>/'
