@@ -292,6 +292,19 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DMInitSpin').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMAllowReuse').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMAllowExtrapolation').'\>/'
 
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceDM').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeDM').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceH').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeH').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceEDM').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeEDM').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceHarris').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeHarris').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceFreeE').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeFreeE').'\>/'
+
+" The below 5 keywords are superseeded by the above flags
+" However, they are still read
 exe 'syn match 	siestaKeys 	/\<'.CP('DMTolerance').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMRequireEnergyConvergence').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMEnergyTolerance').'\>/'
