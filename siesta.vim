@@ -746,6 +746,7 @@ syn match 	siestaArgs 	'\<diag\(\(-A[1-3]\)\|\(-[a-c]\)\)\=\>'
 syn match 	siestaArgs 	'\<mid-rule\>'
 syn match 	siestaArgs 	'\<TSHS-file\>'
 syn match 	siestaArgs 	'\(\s\|^\)TSHS\($\|\s\)'
+syn match 	siestaArgs 	'\(\s\|^\)HS\($\|\s\)'
 
 syn keyword 	siestaVars 	a b alpha beta gamma A3 A2 A1 inf prev next
 syn match 	siestaVars 	'\(\s\|^\)[+-][a-c][1-3]\($\|\s\)'
