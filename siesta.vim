@@ -542,7 +542,7 @@ exe 'syn match 	siestaOutput 	/\<'.CP('TBTdH').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTdHParallel').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTHS').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTTSHSFiles').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTHSFiles').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTkFile').'\>/'
 
@@ -599,7 +599,7 @@ syn match 	siestaKeys 	"Eta"
 syn match 	siestaKeys 	"bloch-\(A[1-3]\|[a-c]\)"
 syn match 	siestaKeys 	"pre-expand"
 syn match 	siestaKeys 	"bulk"
-syn match 	siestaKeys 	"\(TSDE-file\|TSDE\)"
+syn match 	siestaKeys 	"\(DE-file\|DE\)"
 syn match 	siestaKeys 	"out-of-core"
 syn match 	siestaKeys 	"Ef-fraction"
 syn match 	siestaKeys 	"check-kgrid"
