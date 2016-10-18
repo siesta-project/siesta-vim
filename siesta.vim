@@ -588,6 +588,8 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DMInitBulk').'\([\._-]*\w\+[\._-]*'.CP('DM'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElecs').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSElec').'[\._-]*\w\+\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TSTSfile').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('TBTElecs').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('TBTElec').'[\._-]*\w\+\>/'
 
 " These keys are existing in the Elec block and are parsed 'as is'
 syn match 	siestaKeys 	"\(chemical-potential\|chem-pot\|mu\)"
