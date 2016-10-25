@@ -88,7 +88,6 @@ exe 'syn match	siestaOutput	/\<'.CP('WriteDMHSHistoryNetCDF').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('SaveHS').'\>/'
 
-exe 'syn match	siestaOutput	/\<'.CP('DiagUseNewDiagk').'\>/'
 
 exe 'syn match	siestaOutput	/\<'.CP('WriteEigenvalues').'\>/'
 exe 'syn match	siestaOutput	/\<'.CP('LongOutput').'\>/'
@@ -181,6 +180,14 @@ exe 'syn match 	siestaKeys 	/\<'.CP('NumberOfAtoms').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('ChemicalSpeciesLabel').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('AtomicMass').'\>/'
 
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagAllInOne').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagDivideAndConquer').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagNoExpert').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagPreRotate').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagUse2D').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagParallelOverK').'\>/'
+exe 'syn match	siestaKeys	/\<'.CP('DiagUseNewDiagk').'\>/'
+
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOBasis').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOBasisType').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOBasisSize').'[\._-]*s\=\>/'
@@ -241,6 +248,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('XCfunctional').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('XCauthors').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('XChybrid').'\>/'
 
+exe 'syn match 	siestaKeys 	/\<'.CP('Spin').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SpinPolarized').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('NonCollinearSpin').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('FixSpin').'\>/'
