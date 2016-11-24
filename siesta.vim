@@ -260,21 +260,54 @@ exe 'syn match 	siestaKeys 	/\<'.CP('MinSCFIterations').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('MaxSCFIterations').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFMustConverge').'\>/'
 
-exe 'syn match 	siestaKeys 	/\<'.CP('MixHamiltonian').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('DMMixSCF1').'\>/'
+"
+" Mixing parameters
+"
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFMix').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixAfterConvergence').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFRequireHConvergence').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFHTolerance').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFRecomputeHAfterScf').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('CompatPreV4DmH').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('DMMixingWeight').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixFirst').'\>/'
+" old-style keys
+" >
+exe 'syn match 	siestaKeys 	/\<'.CP('MixHamiltonian').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('MixCharge').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DM.MixSCF1').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DM.MixingWeight').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DM.KickMixingWeight').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMNumberPulay').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFPulayDamping').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFPulayMinimumHistory').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFPulayDmaxRegion').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMNumberKick').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMKickMixingWeight').'\>/'
+" <
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixSpin').'\>/'
+" The mixing methods
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerMethod').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerVariant').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerHistory').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerWeight').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerKick').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerKickWeight').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerRestart').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerRestartSave').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerLinearAfter').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixerLinearAfterSave').'\>/'
+
+" Convergence parameters
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFHConverge').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFHTolerance').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFDMConverge').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFDMTolerance').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFHarrisConverge').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFHarrisTolerance').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFEDMConverge').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFEDMTolerance').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFFreeEConverge').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFFreeETolerance').'\>/'
+
+
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixAfterConvergence').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('SCFRecomputeHAfterScf').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('CompatPreV4DmH').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMPulayAvoidFirstAfterKick').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFLinearMixingAfterPulay').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixingWeightAfterPulay').'\>/'
@@ -286,7 +319,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DMNumberBroyden').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMBroydenCycleOnMaxit').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMBroydenVariableWeight').'\>/'
 
-exe 'syn match 	siestaKeys 	/\<'.CP('MixCharge').'\>/'
+" This is related to MixCharge
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFKerkerq0sq').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFRhoGMixingCutoff').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFRhoGDIISDepth').'\>/'
@@ -299,17 +332,6 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DMInitSpinAF').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMInitSpin').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMAllowReuse').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMAllowExtrapolation').'\>/'
-
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceDM').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeDM').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceH').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeH').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceEDM').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeEDM').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceHarris').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeHarris').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFToleranceFreeE').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('SCFConvergeFreeE').'\>/'
 
 " The below 5 keywords are superseeded by the above flags
 " However, they are still read
