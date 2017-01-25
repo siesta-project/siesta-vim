@@ -745,7 +745,7 @@ syn keyword	siestaArgs 	diagon OMM OrderN Transiesta FD MP Kim files
 syn keyword 	siestaArgs 	LDA LSD GGA VDW CA PZ PW92 PW91 PBE revPBE RPBE WC AM05
 syn keyword 	siestaArgs 	PBEsol PBEJsJrLO PBEGcGxLO PBEGcGxHEG BLYP DRSLL LMKLL KBM
 syn keyword 	siestaArgs 	C09 BH VV split splitgauss nodes nonodes filteret SZ DZ DZP 
-syn keyword 	siestaArgs 	SZP STANDARD MINIMAL polarized unpolarized polycrystal yes 
+syn keyword 	siestaArgs 	SZP STANDARD MINIMAL polycrystal yes 
 syn keyword 	siestaArgs 	no C6 C8 C10 harm Grimme CG Broyden FIRE Verlet Nose FC
 syn keyword 	siestaArgs 	ParrinelloRahman NoseParrinelloRahman Anneal Forces
 syn keyword 	siestaArgs 	Temperature Pressure TemperatureandPressure cellside
@@ -758,6 +758,12 @@ syn keyword 	siestaArgs 	MP buffer fermi ramp central cell BTD MUMPS full speed
 syn keyword 	siestaArgs 	memory propagation column auto AMD AMF SCOTCH PORD METIS
 syn keyword 	siestaArgs 	QAMD sparse block path diagonal displacement disp size
 syn keyword 	siestaArgs 	list Sommerfield GaussFermi charge
+
+"
+" Spin arguments
+"
+syn keyword   siestaArgs unpolarized polarized collinear non-collinear noncollinear
+syn keyword   siestaArgs spin-orbit spin-orbit-on spin-orbit-off
 
 syn match 	siestaArgs 	"\(\s\|^\)atom\($\|\s\)"
 syn match 	siestaArgs 	'\<Ordejon-Mauri\>'
