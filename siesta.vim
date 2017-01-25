@@ -243,6 +243,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('KgridCutoff').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('KgridMonkhorstPack').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('ChangeKgridInMD').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TimeReversalSymmetryForKpoints').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('ForceAuxCell').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('XCfunctional').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('XCauthors').'\>/'
