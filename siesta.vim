@@ -188,6 +188,14 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DiagUse2D').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DiagParallelOverK').'\>/'
 exe 'syn match	siestaKeys	/\<'.CP('DiagUseNewDiagk').'\>/'
 
+" Diagonalization keys introduced in 4.1
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagAlgorithm').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagProcessorY').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagBlockSize').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagAbsTol').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagOrFac').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('DiagUpperLower').'\>/'
+
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOBasis').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOBasisType').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOBasisSize').'[\._-]*s\=\>/'
