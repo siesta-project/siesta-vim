@@ -211,7 +211,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('PAOContractionCutoff').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOSoftDefault').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOSoftInnerRadius').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PAOSoftPotential').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('PAOOldStylePolOrb').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('PAOOldStylePolOrbs').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('PSlmax').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('PSKBprojectors').'\>/'
@@ -559,7 +559,7 @@ exe 'syn match 	siestaOutput 	/\<'.CP('TSDESave').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TSSSave').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTVerbosity').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('TBTDirectorySave').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTDirectory').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFPrecision').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFTPrecision').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTCDFCurrentPrecision').'\>/'
@@ -584,6 +584,7 @@ exe 'syn match 	siestaOutput 	/\<'.CP('TBTCurrentOrb').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTdH').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTdHParallel').'\>/'
+exe 'syn match 	siestaOutput 	/\<'.CP('TBTdSE').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTHS').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTHSFiles').'\>/'
@@ -728,8 +729,6 @@ exe 'syn match 	siestaKeys 	/\<'.CP('TBTSpin').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTDivideAndConquer').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTNormalize').'\>/'
 
-exe 'syn match 	siestaKeys 	/\<'.CP('TBTdHAlgorithm').'\>/'
-
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTVoltage').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTHS').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('TBTk').'\>/'
@@ -751,12 +750,12 @@ syn match 	siestaKeys 	"proj"
 " args - release and dev
 "
 
-syn keyword	siestaArgs 	diagon OMM OrderN Transiesta FD MP Kim files
+syn keyword	siestaArgs 	diagon OMM OrderN Transiesta FD MP Cold Kim files
 syn keyword 	siestaArgs 	LDA LSD GGA VDW CA PZ PW92 PW91 PBE revPBE RPBE WC AM05
 syn keyword 	siestaArgs 	PBEsol PBEJsJrLO PBEGcGxLO PBEGcGxHEG BLYP DRSLL LMKLL KBM
 syn keyword 	siestaArgs 	C09 BH VV split splitgauss nodes nonodes filteret SZ DZ DZP 
 syn keyword 	siestaArgs 	SZP STANDARD MINIMAL polycrystal yes 
-syn keyword 	siestaArgs 	no C6 C8 C10 harm Grimme CG Broyden FIRE Verlet Nose FC
+syn keyword 	siestaArgs 	no C6 C8 C10 harm Grimme Lua CG Broyden FIRE Verlet Nose FC
 syn keyword 	siestaArgs 	ParrinelloRahman NoseParrinelloRahman Anneal Forces
 syn keyword 	siestaArgs 	Temperature Pressure TemperatureandPressure cellside
 syn keyword 	siestaArgs 	cellangle stress position center rigid routine clear
@@ -764,7 +763,7 @@ syn keyword 	siestaArgs 	constr molecule Z
 syn keyword 	siestaArgs 	single double float Original GR
 syn keyword 	siestaArgs 	plane delta gauss exp square box coords sphere
 syn keyword 	siestaArgs 	none all Green bulk part circle line tail points method 
-syn keyword 	siestaArgs 	MP buffer fermi ramp central cell BTD MUMPS full speed
+syn keyword 	siestaArgs 	buffer fermi ramp central cell BTD MUMPS full speed
 syn keyword 	siestaArgs 	memory propagation column auto AMD AMF SCOTCH PORD METIS
 syn keyword 	siestaArgs 	QAMD sparse block path diagonal displacement disp size
 syn keyword 	siestaArgs 	list Sommerfield GaussFermi charge
