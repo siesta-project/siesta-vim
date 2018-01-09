@@ -452,7 +452,6 @@ exe 'syn match 	siestaKeys 	/\<'.CP('MMGrimmeS6').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('BlockSize').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('ProcessorY').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DiagMemory').'\>/'
-exe 'syn match 	siestaKeys 	/\<'.CP('DiagParallelOverK').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('UseDomainDecomposition').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('UseSpatialDecomposition').'\>/'
