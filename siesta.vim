@@ -461,6 +461,10 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DirectPhi').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('UseTreeTimer').'\>/'
 
+exe 'syn match 	siestaKeys 	/\<'.CP('LuaScript').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LuaDebug').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LuaDebugMPI').'\>/'
+
 exe 'syn match 	siestaKeys 	/\<'.CP('MDTypeOfRun').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('MDVariableCell').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('MDConstantVolume').'\>/'
