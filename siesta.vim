@@ -287,6 +287,9 @@ exe 'syn match 	siestaKeys 	/\<'.CP('SCFPulayMinimumHistory').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFPulayDmaxRegion').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMNumberKick').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMKickMixingWeight').'\>/'
+
+exe 'syn match 	siestaKeys 	/\<'.CP('MixerDebug').'\>/'
+
 " <
 exe 'syn match 	siestaKeys 	/\<'.CP('SCFMixSpin').'\>/'
 " The mixing methods
