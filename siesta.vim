@@ -57,7 +57,7 @@ syn match 	siestaFloat 	"\(\s\|^\)\.\d\+\([ed][-+]\=\d\+\)\=\>"
 syn match 	siestaFloat 	"\<\d\+[ed][-+]\=\d\+\>"
 
 syn match 	siestaComment 	"#\(.*&\s*\n\)*.*$"
-syn match 	siestaBlock 	"%\w*"
+syn match 	siestaDirective	"%\w*"
 
 "
 " input/output keywords
@@ -461,7 +461,9 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DirectPhi').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('UseTreeTimer').'\>/'
 
+" Lua options
 exe 'syn match 	siestaKeys 	/\<'.CP('LuaScript').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('LuaInteractive').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('LuaDebug').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('LuaDebugMPI').'\>/'
 
@@ -548,9 +550,6 @@ exe 'syn match 	siestaOutput 	/\<'.CP('CDFGridPrecision').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('SCFMixDebug').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('SCFMixDebugMPI').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('LUAScript').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('LUADebug').'\>/'
-exe 'syn match 	siestaOutput 	/\<'.CP('LUADebugMPI').'\>/'
 
 exe 'syn match 	siestaOutput 	/\<'.CP('GF').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('GFReUse').'\>/'
@@ -570,11 +569,11 @@ exe 'syn match 	siestaOutput 	/\<'.CP('TBTProgress').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTGFReuse').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTElecsOutofcore').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTElecsGFOnly').'\>/'
-exe 'syn match 	siestaKeys	 	/\<'.CP('TBTElecsBulk').'\>/'
-exe 'syn match 	siestaKeys	 	/\<'.CP('TBTElecsEta').'\>/'
-exe 'syn match 	siestaKeys	 	/\<'.CP('TBTElecsAccuracy').'\>/'
-exe 'syn match 	siestaKeys	 	/\<'.CP('TBTElecsNeglectPrincipal').'\>/'
-exe 'syn match 	siestaKeys	 	/\<'.CP('TBTElecsCoordEPS').'\>/'
+exe 'syn match 	siestaKeys      /\<'.CP('TBTElecsBulk').'\>/'
+exe 'syn match 	siestaKeys      /\<'.CP('TBTElecsEta').'\>/'
+exe 'syn match 	siestaKeys      /\<'.CP('TBTElecsAccuracy').'\>/'
+exe 'syn match 	siestaKeys      /\<'.CP('TBTElecsNeglectPrincipal').'\>/'
+exe 'syn match 	siestaKeys      /\<'.CP('TBTElecsCoordEPS').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTDOSElecs').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTDOSGF').'\>/'
 exe 'syn match 	siestaOutput 	/\<'.CP('TBTDOSA').'\>/'
@@ -758,18 +757,21 @@ syn keyword 	siestaArgs 	LDA LSD GGA VDW CA PZ PW92 PW91 PBE revPBE RPBE WC AM05
 syn keyword 	siestaArgs 	PBEsol PBEJsJrLO PBEGcGxLO PBEGcGxHEG BLYP DRSLL LMKLL KBM
 syn keyword 	siestaArgs 	C09 BH VV split splitgauss nodes nonodes filteret SZ DZ DZP 
 syn keyword 	siestaArgs 	SZP STANDARD MINIMAL polycrystal yes 
-syn keyword 	siestaArgs 	no C6 C8 C10 harm Grimme Lua CG Broyden FIRE Verlet Nose FC
+syn keyword 	siestaArgs 	no C6 C8 C10 harm Grimme CG Broyden FIRE Verlet Nose FC
 syn keyword 	siestaArgs 	ParrinelloRahman NoseParrinelloRahman Anneal Forces
 syn keyword 	siestaArgs 	Temperature Pressure TemperatureandPressure cellside
 syn keyword 	siestaArgs 	cellangle stress position center rigid routine clear
 syn keyword 	siestaArgs 	constr molecule Z 
 syn keyword 	siestaArgs 	single double float Original GR
 syn keyword 	siestaArgs 	plane delta gauss exp square box coords sphere
-syn keyword 	siestaArgs 	none all Green bulk part circle line tail points method 
+syn keyword 	siestaArgs 	none all part circle line tail points method
 syn keyword 	siestaArgs 	buffer fermi ramp central cell BTD MUMPS full speed
 syn keyword 	siestaArgs 	memory propagation column auto AMD AMF SCOTCH PORD METIS
 syn keyword 	siestaArgs 	QAMD sparse block path diagonal displacement disp size
-syn keyword 	siestaArgs 	list Sommerfield GaussFermi charge
+syn keyword 	siestaArgs 	list Sommerfeld GaussFermi charge
+
+" Currently disabled arguments as they interfere with other vim recognitions
+" Green MUMPS Lua bulk
 
 "
 " Spin arguments
@@ -802,13 +804,12 @@ syn match 	siestaArgs 	'\(\s\|^\)HS\($\|\s\)'
 syn keyword 	siestaVars 	a b alpha beta gamma A3 A2 A1 inf prev next
 syn match 	siestaVars 	'\(\s\|^\)[+-][a-c][1-3]\($\|\s\)'
 
-syn keyword 	siestaOperats 	from to step begin end plus minus
+syn keyword 	siestaOperats 	from to step begin start end plus minus
 syn match 	siestaOperats 	'[\{\}><]'
 
 if !exists("did_siesta_syntax_inits")
   let did_siesta_syntax_inits = 1
   hi link siestaBoolean 	Boolean
-  hi link siestaBlock 		Define
   hi link siestaInt		Special
   hi link siestaFloat		Float
   hi link siestaComment		Comment
@@ -817,6 +818,7 @@ if !exists("did_siesta_syntax_inits")
   hi link siestaArgs 		Special
   hi link siestaOperats 	Character
   hi link siestaVars 		Label
+  hi link siestaDirective	Define
   hi link siestaKeys 		Typedef
 endif
 
