@@ -20,6 +20,7 @@ syn match 	siestaBoolean 	"\.\(true\|false\)\."
 syn match 	siestaBoolean 	"\(\s\|^\)[tf]\($\|\s\)"
 syn keyword 	siestaBoolean 	true false yes no
 
+syn keyword 	siestaUnits 	ry ev ang bohr
 syn keyword 	siestaUnits 	erg hartee mhartree hz thz
 syn keyword 	siestaUnits 	kg amu nm fs ps ns
 syn keyword 	siestaUnits 	pa mpa gpa atm bar mbar debye
@@ -773,14 +774,14 @@ syn keyword 	siestaArgs 	cellangle stress position center rigid routine clear
 syn keyword 	siestaArgs 	constr molecule Z 
 syn keyword 	siestaArgs 	single double float Original GR
 syn keyword 	siestaArgs 	plane delta gauss exp square box coords sphere
-syn keyword 	siestaArgs 	none all part circle line tail points method
+syn keyword 	siestaArgs 	none all part circle line tail user points method
 syn keyword 	siestaArgs 	buffer fermi ramp central cell BTD MUMPS full speed
 syn keyword 	siestaArgs 	memory propagation column auto AMD AMF SCOTCH PORD METIS
 syn keyword 	siestaArgs 	QAMD sparse block path diagonal displacement disp size
 syn keyword 	siestaArgs 	list Sommerfeld GaussFermi charge
 
 " Currently disabled arguments as they interfere with other vim recognitions
-" Green MUMPS Lua bulk
+"   Green MUMPS Lua bulk
 
 "
 " Spin arguments
@@ -813,7 +814,7 @@ syn match 	siestaArgs 	'\(\s\|^\)HS\($\|\s\)'
 syn keyword 	siestaVars 	a b alpha beta gamma A3 A2 A1 inf prev next
 syn match 	siestaVars 	'\(\s\|^\)[+-][a-c][1-3]\($\|\s\)'
 
-syn keyword 	siestaOperats 	from to step begin start end plus minus
+syn keyword 	siestaOperats 	from to step begin start end plus minus file
 syn match 	siestaOperats 	'[\{\}><]'
 
 if !exists("did_siesta_syntax_inits")
