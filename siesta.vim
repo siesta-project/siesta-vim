@@ -359,6 +359,7 @@ exe 'syn match 	siestaKeys 	/\<'.CP('DMRequireHarrisConvergence').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('DMHarrisTolerance').'\>/'
 
 exe 'syn match 	siestaKeys 	/\<'.CP('MeshCutoff').'\>/'
+exe 'syn match 	siestaKeys 	/\<'.CP('MeshSizes').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('MeshSubDivisions').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('GridCellSampling').'\>/'
 exe 'syn match 	siestaKeys 	/\<'.CP('EggboxRemove').'\>/'
@@ -847,7 +848,7 @@ if !exists("did_siesta_syntax_inits")
   hi link siestaFloat		Float
   hi link siestaComment		Comment
   hi link siestaUnits 		Label
-  hi link siestaOutput 		Function
+  hi link siestaOutput 		Typedef
   hi link siestaArgs 		Special
   hi link siestaOperats 	Character
   hi link siestaVars 		Label
